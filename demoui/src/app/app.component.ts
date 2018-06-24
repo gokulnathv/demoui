@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Gokul';
+
+  name: String = '';
+  enableResetBtn: Boolean = false;
+
+  onNameEntered() {
+      this.enableResetBtn = this.name ? true : false;
+  }
+
+  onResetBtnClick() {
+    this.name = '';
+    this.onNameEntered();
+  }
 }
