@@ -1,3 +1,11 @@
 h3 {
     color: green;  
   }
+
+.logDetails {
+  color: white;
+} 
+
+.logDetailsbg {
+  background-color: blue;
+}

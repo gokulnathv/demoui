@@ -10,6 +10,9 @@ export class AppComponent {
   name: String = '';
   enableResetBtn: Boolean = false;
   enableh3tag: Boolean = false;
+  toogleParagraph: Boolean = false;
+  detailsLogList = new Array();
+  logId: number  = 0;
 
   onNameEntered() {
       this.enableResetBtn = this.name ? true : false;
@@ -23,6 +26,13 @@ export class AppComponent {
   
   onSubmitButtonClick() {
     this.enableh3tag = true;
+  }
+
+  onDispalyDetails() {
+    this.toogleParagraph = !this.toogleParagraph;
+    this.logId++;
+    this.detailsLogList.push(this.logId);
+    console.log(this.detailsLogList);
   }
   
 }

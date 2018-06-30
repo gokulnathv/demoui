@@ -11,6 +11,14 @@
             <button class="btn btn-primary" [disabled]="!enableResetBtn" (click)="onSubmitButtonClick()">Submit</button>
             <hr>
             <servers-component></servers-component>
+            <hr>
+            <p> Build in Assignment part 1</p>
+            <button class="btn btn-primary" (click)="onDispalyDetails()">Dispaly Details</button>
+            <p *ngIf="toogleParagraph">Toogle Paragraph</p>
+            <div *ngFor="let detailsLog of detailsLogList">
+                <p [ngStyle]="{backgroundColor : detailsLog > 4 ? 'blue' : 'white'}"
+                   [ngClass]="{logDetails : detailsLog > 4 }">{{detailsLog}}</p>
+            </div>
         </div>
     </div>
 </div>
