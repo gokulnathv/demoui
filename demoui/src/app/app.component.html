@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-xs-12">
             <input type="text" [(ngModel)]="name" (ngModelChange)="onNameEntered()">
@@ -20,5 +20,17 @@
                    [ngClass]="{logDetails : detailsLog > 4 }">{{detailsLog}}</p>
             </div>
         </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="col-xs-12">
+        <app-details-edit (addDetailEmmiter)="addDetail($event)"></app-details-edit>
+    </div>
+
+    <div class="col-xs-12" style="height: 12px;"></div>
+    <div class="col-xs-12">
+        <app-details-view *ngFor="let detailList of DetailsList"
+        [detailList]="detailList"></app-details-view>
     </div>
 </div>
